@@ -47,9 +47,9 @@ h3 { letter-spacing: 5px; font-weight: 200; color: #f39c12 }
 
 .category {
     overflow: auto;
-    overflow-y: hidden; //* hide vertical */
-    margin: 200;
     padding: 1%;
+    overflow-y: hidden; /* hide vertical */
+    /* margin: 200; */
 }
 
 .category h2 {
