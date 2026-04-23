@@ -13,33 +13,32 @@ header {
     margin-bottom: 40px;
 }
 
-h1 { letter-spacing: 5px; font-weight: 200; font-size: 50px }
-/* h2 { letter-spacing: 1px; font-weight: 200; font-size: 20px; color: #f39c12 } */
-h3 { letter-spacing: 1px; font-weight: 100; font-size: 16px; color: #f39c12 }
-
-.film_name {
-    align-items: center;
-    padding: 1px 8px;
-    letter-spacing: 1px;
+footer {
+    border-top: 1px solid #333;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+    background-color:#303030;
+    border-radius: 10px;
+    margin-bottom: 40px;
 }
+
+h1 { letter-spacing: 5px; scale:2; }
+/* h2 { letter-spacing: 1px; font-weight: 200; font-size: 20px; color: #f39c12 } */
+h3 { letter-spacing: 5px; font-weight: 200; color: #f39c12 }
 
 .film_role {
     text-align: center;
     padding: 4px 16px;
-    letter-spacing: 1px;
-    font-size: 12px;
+    letter-spacing: 2px;
+    font-size: 10px;
     overflow: false;
     width: 120px;
-
-}
-
-.film_role :hover {
-    transform: scale(1.25);
 }
 
 .category {
     overflow: auto;
-    overflow-y: hidden; //* hide vertical
+    overflow-y: hidden; //* hide vertical */
 
 }
 
@@ -70,18 +69,26 @@ h3 { letter-spacing: 1px; font-weight: 100; font-size: 16px; color: #f39c12 }
     scrollbar-width: thin; /* For Firefox */
 }
 
+.poster :hover,.poster:has(img:hover){
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    /* box-shadow: 0px 0px 50px 10px rgb(197, 90, 90); */
+
+
+}
+
 .poster img {
     height: 225px; /* Adjust based on your poster aspect ratio */
     width: 150px;
     display: block;
-    transition: transform 0.3s ease;
-    border: 1px solid #222;
     border-radius: 6px;
     object-fit: cover;
 
 }
 
 .poster img:hover {
-    transform: scale(1.2);
-    box-shadow: 0px 0px 50px 20px rgb(0, 0, 0);
+    transform: none;
+    overflow: true;
+    box-shadow: 0px 0px 40px 20px rgb(0, 0, 0);
+
 }
