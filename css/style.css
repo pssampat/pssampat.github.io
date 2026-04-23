@@ -37,12 +37,12 @@ h3 { letter-spacing: 5px; font-weight: 200; color: #f39c12 }
 }
 
 .film_role {
+
     text-align: center;
     padding: 4px 16px;
     letter-spacing: 2px;
     font-size: 10px;
-    overflow: false;
-    width: 120px;
+
 }
 
 .category {
@@ -77,10 +77,6 @@ h3 { letter-spacing: 5px; font-weight: 200; color: #f39c12 }
     scrollbar-width: thin; /* For Firefox */
 }
 
-/* .category :hover, poster:has(img:hover){
-    box-shadow: 0px 0px 40px 20px rgb(0, 0, 0);
-} */
-
 .poster :hover,.poster:has(img:hover){
     transform: scale(1.2);
     transition: transform 0.3s ease;
@@ -98,6 +94,10 @@ h3 { letter-spacing: 5px; font-weight: 200; color: #f39c12 }
 
 }
 
+.poster img,
+.film_role {
+    width: 150px;
+}
 .poster img:hover {
     transform: none;
     overflow: true;
@@ -131,4 +131,80 @@ h3 { letter-spacing: 5px; font-weight: 200; color: #f39c12 }
     /* background-image: linear-gradient(to top, #0D1212, #36193ecc), url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
     width:100%;
     font-family: Montserrat, sans-serif;
+}
+
+/* POPUP */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 92vw;     /* almost full width */
+    height: 92vh;    /* almost full height */
+
+    background: rgba(19, 19, 19, 0.95);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+
+    display: none;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.popup.show {
+    display: block;
+}
+
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 32px;   /* bigger */
+    font-weight: 300;
+    line-height: 1;
+}
+
+.popup-close:hover {
+    transform: scale(1.2);
+}
+
+.popup-image {
+    max-height: 50vh;
+    width: auto;
+    border-radius: 6px;
+}
+
+.popup-title {
+    margin:auto;
+    font-size: 24px;
+    font-weight: bold;
+}
+.popup-role {
+    margin:auto;
+    font-size: 18px;
+    font-weight: bold;
+}
+.popup-description {
+    margin:auto;
+    font-size: 18px;
+    font-weight:lighter;
+}
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+.popup-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
 }
