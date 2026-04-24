@@ -1,7 +1,7 @@
-.resume {
-    /* background: #f3f3f3; */
-    /* border: 1px solid #ddd; */
-}
+/* .resume {
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+} */
 
 .resume-left {
     padding: 30px;
@@ -15,20 +15,25 @@
 
 .section {
     margin-bottom: 25px;
+    color:#999;
+
 }
 
 .section-title {
     font-size: 13px;
     font-weight: 700;
     letter-spacing: .5px;
-    color: #f39c12;
-    border-bottom: 2px solid #f39c12;
+    /* color: #f39c12; */
+    border-bottom: 2px solid #d41844;
     padding-bottom: 4px;
     margin-bottom: 15px;
+    color:#d41844;
+
+    
 }
 
 .meta {
-    color: #666;
+    color:#d41844;
     font-size: 14px;
     margin-bottom: 6px;
 }
@@ -42,10 +47,27 @@
 }
 
 .resume li::marker {
-    color: #6c3cff;
+    color:#666  ;
 }
 
+/* FOR SUB SKILLS AREA */
 .sub {
     font-weight: 700;
     margin-top: 15px;
+    color: #ffffff;
+
+}
+
+.resume_container{
+    background-color: #41232b44;
+    border-radius: 10px;
+    box-shadow: 0px 20px 20px 1px #00000022;
+
+}
+
+.resume_role{
+    color: #ffffff;
+    font-weight:normal;   
+    font-size: 24px; 
+
 }
