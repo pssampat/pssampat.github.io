@@ -142,9 +142,15 @@ h3 { letter-spacing: 5px; font-weight: 200; color: #f39c12 }
 }
 .creator-name {
     font-weight: bold;
-    color: rgb(41, 226, 41);
-    color:#af042c;
+    /* color: rgb(41, 226, 41);
+    color:#af042c; */
     letter-spacing: 10px;
+
+    background: linear-gradient(90deg, #a78bfa, #7c3aed, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 .homepage {
