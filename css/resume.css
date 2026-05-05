@@ -1,22 +1,47 @@
+@import url('style.css');
+
+:root {
+    /* ---------------------------------
+       RESUME COLORS
+    ---------------------------------- */
+    --resume-accent: var(--accent-4); /* Matches your main accent-red-primary */
+    --resume-text-main: var(--accent-1);
+    --resume-text-marker: var(--accent-1);
+    --resume-text-light: var(--accent-5);
+    --resume-bg-container: var(--accent-3);
+    
+    /* ---------------------------------
+       RESUME SPACING & SIZING
+    ---------------------------------- */
+    --resume-padding-main: 30px;
+    --resume-margin-section: 25px;
+    --resume-margin-item: 6px;
+    --resume-radius: 10px;
+    
+    /* ---------------------------------
+       RESUME SHADOWS
+    ---------------------------------- */
+    --resume-shadow: 0px 20px 20px 1px #00000022;
+}
+
 /* .resume {
     background: #f3f3f3;
     border: 1px solid #ddd;
 } */
 
 .resume-left {
-    padding: 30px;
+    padding: var(--resume-padding-main);
     /* border-right: 1px solid #ddd; */
 }
 
 .resume-right {
-    padding: 30px;
+    padding: var(--resume-padding-main);
     /* background: #efefef; */
 }
 
 .section {
-    margin-bottom: 25px;
-    color:#999;
-
+    margin-bottom: var(--resume-margin-section);
+    color: var(--resume-text-main);
 }
 
 .section-title {
@@ -24,18 +49,16 @@
     font-weight: 700;
     letter-spacing: .5px;
     /* color: #f39c12; */
-    border-bottom: 2px solid #d41844;
+    border-bottom: 2px solid var(--resume-accent);
     padding-bottom: 4px;
     margin-bottom: 15px;
-    color:#d41844;
-
-    
+    color: var(--resume-accent);
 }
 
 .meta {
-    color:#d41844;
+    color: var(--resume-accent);
     font-size: 14px;
-    margin-bottom: 6px;
+    margin-bottom: var(--resume-margin-item);
 }
 
 .resume ul {
@@ -43,31 +66,30 @@
 }
 
 .resume li {
-    margin-bottom: 6px;
+    margin-bottom: var(--resume-margin-item);
 }
 
 .resume li::marker {
-    color:#666  ;
+    color: var(--resume-text-marker);
 }
 
 /* FOR SUB SKILLS AREA */
 .sub {
     font-weight: 700;
     margin-top: 15px;
-    color: #ffffff;
-
+    color: var(--resume-text-light);
 }
 
-.resume_container{
-    background-color: #41232b44;
-    border-radius: 10px;
-    box-shadow: 0px 20px 20px 1px #00000022;
+.resume_container {
+    /* background-color:var(--resume-bg-container); */
+    background-color: color-mix(in srgb, var(--resume-bg-container), transparent 70%);
 
+    border-radius: var(--resume-radius);
+    box-shadow: var(--resume-shadow);
 }
 
-.resume_role{
-    color: #ffffff;
-    font-weight:normal;   
+.resume_role {
+    color: var(--resume-text-light);
+    font-weight: normal;   
     font-size: 24px; 
-
 }
