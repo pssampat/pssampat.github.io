@@ -1,0 +1,323 @@
+{
+  "FEATURE FILMS": [
+    {
+      "title": "Wrecking Crew",
+      "role": "Lighting Lead + Supervisor",
+      "link": "https://www.youtube.com/watch?v=v8R0xDczERo",
+      "desc": "Served as Lead/Supervisor on the project, overseeing shot execution and quality. Successfully delivered 90+ shots spanning a wide range of work, including precise face replacement, enhanced explosion effects, and seamless set extensions.",
+      "image": "assets/images/films/wrecking_crew.jpg"
+    },
+    {
+      "title": "Chhaava",
+      "role": "Lighting Lead",
+      "link": "https://www.youtube.com/watch?v=op8YgJhJwCo",
+      "desc": "Served as Lighting Lead on the project, overseeing execution and maintaining visual quality across all shots. Delivered a diverse range of work, including set extensions, CG weapons integration, crowd lighting, and FX enhancements.",
+      "image": "assets/images/films/chhaava.jpg"
+    },
+    {
+      "title": "Back In Action",
+      "role": "Lighting Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/back_in_action.jpg"
+    },
+    {
+      "title": "Bureu 749",
+      "role": "Lighting Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/bureu_749.jpg"
+    },
+    {
+      "title": "Borderlands",
+      "role": "Lighting Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/borderlands.jpg"
+    },
+    {
+      "title": "Fighter",
+      "role": "Lighting Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/fighter.jpg"
+    },
+    {
+      "title": "The Outlaws",
+      "role": "Lighting Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/the_outlaws.jpg"
+    },
+    {
+      "title": "Havoc",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/havoc_ver2 (1).jpg"
+    },
+    {
+      "title": "Knights of the Zodiac",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/knights_of_the_zodiac.jpg"
+    },
+    {
+      "title": "Bholaa",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/bholaa.jpg"
+    },
+    {
+      "title": "Scream Six",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/scream_six.jpg"
+    },
+    {
+      "title": "We Have a Ghost",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/we_have_a_ghost.jpg"
+    },
+    {
+      "title": "Landscape With Invisible Hand",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/landscape_with_invisible_hand.jpg"
+    },
+    {
+      "title": "I Wanna Dance With Somebody",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/i_wanna_dance_with_somebody.jpg"
+    },
+    {
+      "title": "Significant Other",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/significant_other.jpg"
+    },
+    {
+      "title": "Glass Onion: A Knives Out Mystery",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/glass_onion_a_knives_out_mystery_ver2.jpg"
+    },
+    {
+      "title": "Brahmastra Part One: Shiva",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/brahmastra_part_one_shiva.jpg"
+    },
+    {
+      "title": "Me Time",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/MeTime.jpg"
+    },
+    {
+      "title": "RRR",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/rrr.jpg"
+    },
+    {
+      "title": "83",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/83.jpg"
+    },
+    {
+      "title": "Antim",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/antim.jpg"
+    },
+    {
+      "title": "The Battle at Lake Changjin",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/battle_at_lake_changjin.jpg"
+    },
+    {
+      "title": "Sweet Girl",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/sweet_girl.jpg"
+    },
+    {
+      "title": "Bellbottom",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/bellbottom.jpg"
+    },
+    {
+      "title": "The White Tiger",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/films/white_tiger_ver2.jpg"
+    }
+  ],
+  "TELEVISION": [
+    {
+      "title": "Starcity",
+      "role": "Lighting Supervisor",
+      "link": "https://www.youtube.com/watch?v=Uh-8EUCJHx8",
+      "desc": "Worked as a Lighting Supervisor to deliver this project in a very short duration. Worked on lunar landing / lunar surface and module re-entry sequences.",
+      "image": "assets/images/tv/starcity_final.jpeg"
+    },
+    {
+      "title": "Agatha Christie's Seven Dials",
+      "role": "Lighting Lead + Supervisor",
+      "link": "https://www.youtube.com/watch?v=L9GfTwKcMto",
+      "desc": "Served as Lighting Lead/Supervisor, overseeing shot execution and ensuring consistent visual quality across the project. Led the recreation of a fully CG, bustling Victorian-era London environment, including Piccadilly Circus, and delivered complex sequences such as a close-up CG train with FX enhancements, digital double replacements, and detailed prop enhancements.",
+      "image": "assets/images/tv/agatha_christies_seven_dials.jpg"
+    },
+    {
+      "title": "Ripley",
+      "role": "Lighting Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/tv/ripley.jpg"
+    },
+    {
+      "title": "Waco: The Aftermath",
+      "role": "Lighting Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/tv/waco_the_aftermath.jpg"
+    },
+    {
+      "title": "Circuit Breakers",
+      "role": "Lighting Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/tv/circuitbreakers.jpg"
+    },
+    {
+      "title": "Silo",
+      "role": "Lighting Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/tv/silo_ver2.jpg"
+    },
+    {
+      "title": "Those About To Die",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/tv/ThoseAboutToDie.jpg"
+    },
+    {
+      "title": "Halo",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/tv/halo_ver2.jpg"
+    },
+    {
+      "title": "American Born Chinese",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/tv/american_born_chinese_ver2.jpg"
+    }
+  ],
+  "ANIMATION": [
+    {
+      "title": "Silk Road Rally",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/animation/SilkRoadRally.jpg"
+    },
+    {
+      "title": "Saving Bikini Bottom",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/animation/SBBRE.jpg"
+    },
+    {
+      "title": "Rock Dog 3",
+      "role": "Lighting TD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/animation/rockdog3.jpg"
+    },
+    {
+      "title": "Legends of Hanuman",
+      "role": "Lighting ATD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/animation/hanuman.jpg"
+    },
+    {
+      "title": "Rock Dog 2",
+      "role": "Lighting TD",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/animation/rockdog2.jpg"
+    },
+    {
+      "title": "LEGO Batman",
+      "role": "Sr. Lookdev Artist + Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/animation/lego_batman.jpg"
+    },
+    {
+      "title": "LEGO Black Panther",
+      "role": "Sr. Lookdev Artist + Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/animation/lego_black_panther.jpg"
+    },
+    {
+      "title": "LEGO Guardians of the Galaxy",
+      "role": "Sr. Lookdev Artist + Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/animation/lego_gog.jpg"
+    },
+    {
+      "title": "LEGO Ninjago",
+      "role": "Sr. Lookdev Artist + Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/animation/lego_ninjago.jpg"
+    },
+    {
+      "title": "LEGO Shazam",
+      "role": "Sr. Lookdev Artist + Lead",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/animation/lego_shazam.jpg"
+    },
+    {
+      "title": "Mia and Me",
+      "role": "Mid Lookdev Artist",
+      "link": "",
+      "desc": "",
+      "image": "assets/images/animation/mia_and_me.jpg"
+    }
+  ]
+}
