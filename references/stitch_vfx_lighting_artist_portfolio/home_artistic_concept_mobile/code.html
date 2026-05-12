@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #0d1515;
+            color: #dce4e4;
+            overflow-x: hidden;
+        }
+        .glass-pane {
+            backdrop-filter: blur(20px);
+            border: 1px solid;
+            border-image-source: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+            border-image-slice: 1;
+        }
+        .glow-orb-cyan {
+            background: radial-gradient(circle, rgba(0,242,255,0.08) 0%, rgba(0,242,255,0) 70%);
+        }
+        .glow-orb-orange {
+            background: radial-gradient(circle, rgba(255,185,90,0.05) 0%, rgba(255,185,90,0) 70%);
+        }
+        .light-streak {
+            background: linear-gradient(90deg, transparent 0%, rgba(225,253,255,0.1) 50%, transparent 100%);
+            transform: rotate(-45deg);
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#221b00",
+                    "primary-container": "#00f2ff",
+                    "tertiary-fixed-dim": "#e8c423",
+                    "background": "#0d1515",
+                    "surface-container-highest": "#2e3637",
+                    "secondary-fixed-dim": "#ffb95a",
+                    "on-error": "#690005",
+                    "secondary-container": "#c68315",
+                    "on-primary-fixed": "#002022",
+                    "on-secondary": "#462a00",
+                    "on-background": "#dce4e4",
+                    "inverse-surface": "#dce4e4",
+                    "surface-dim": "#0d1515",
+                    "on-surface": "#dce4e4",
+                    "on-tertiary-fixed-variant": "#554500",
+                    "outline": "#849495",
+                    "on-secondary-container": "#3d2400",
+                    "inverse-primary": "#00696f",
+                    "error": "#ffb4ab",
+                    "surface-bright": "#333b3b",
+                    "on-secondary-fixed": "#2a1800",
+                    "primary-fixed": "#74f5ff",
+                    "on-primary-fixed-variant": "#004f54",
+                    "error-container": "#93000a",
+                    "on-primary": "#00363a",
+                    "surface-container-lowest": "#080f10",
+                    "surface-variant": "#2e3637",
+                    "primary": "#e1fdff",
+                    "surface-container-high": "#232b2c",
+                    "on-surface-variant": "#b9cacb",
+                    "on-tertiary-container": "#725e00",
+                    "on-error-container": "#ffdad6",
+                    "surface": "#0d1515",
+                    "surface-container": "#192122",
+                    "tertiary": "#fff6e4",
+                    "on-tertiary": "#3b2f00",
+                    "secondary-fixed": "#ffddb6",
+                    "secondary": "#ffb95a",
+                    "on-primary-container": "#006a71",
+                    "tertiary-fixed": "#ffe173",
+                    "outline-variant": "#3a494b",
+                    "primary-fixed-dim": "#00dbe7",
+                    "on-secondary-fixed-variant": "#643f00",
+                    "tertiary-container": "#fed83a",
+                    "surface-tint": "#00dbe7",
+                    "inverse-on-surface": "#2a3232",
+                    "surface-container-low": "#151d1e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gallery-gap": "120px",
+                    "section-margin": "8vw",
+                    "asymmetric-offset": "15%",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "vertical-label": ["JetBrains Mono"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-md-mobile": ["Playfair Display"],
+                    "technical-sm": ["JetBrains Mono"],
+                    "body-main": ["JetBrains Mono"],
+                    "display-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-md": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "vertical-label": ["10px", {"lineHeight": "1", "letterSpacing": "0.3em", "fontWeight": "500"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "technical-sm": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.1em", "fontWeight": "400"}],
+                    "body-main": ["16px", {"lineHeight": "1.6", "fontWeight": "300"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- Ambient Background Elements -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="glow-orb-cyan absolute top-[-10%] left-[-10%] w-[80vw] h-[80vw] opacity-20"></div>
+<div class="glow-orb-orange absolute bottom-[-10%] right-[-10%] w-[70vw] h-[70vw] opacity-10"></div>
+<!-- Cinematic Light Streaks -->
+<div class="light-streak absolute top-[20%] left-[-20%] w-[150%] h-[1px] opacity-30"></div>
+<div class="light-streak absolute top-[45%] left-[-10%] w-[130%] h-[2px] opacity-20"></div>
+<div class="light-streak absolute top-[70%] left-[-30%] w-[160%] h-[1px] opacity-25"></div>
+</div>
+<!-- Top Navigation Anchor (Based on JSON TopAppBar) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/5 backdrop-blur-xl border-b border-white/5 flex justify-between items-center w-full px-[8vw] py-6 h-24">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">LUX_VFX</div>
+<button class="flex flex-col gap-1 items-end group">
+<div class="w-8 h-[1px] bg-primary group-hover:w-10 transition-all duration-300"></div>
+<div class="w-5 h-[1px] bg-primary transition-all duration-300"></div>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="relative z-10 min-h-screen flex flex-col pt-32 px-[8vw]">
+<!-- Hero Section -->
+<section class="flex flex-col flex-grow justify-center py-20">
+<div class="mb-2">
+<span class="font-technical-sm text-technical-sm text-secondary uppercase tracking-[0.4em]">SENIOR</span>
+</div>
+<div class="relative mb-8">
+<h1 class="font-display-lg-mobile text-[120px] leading-[0.85] text-primary tracking-tighter mix-blend-difference">
+                    LUX
+                </h1>
+<div class="absolute -right-4 bottom-4 vertical-text font-vertical-label text-vertical-label text-outline opacity-60">
+                    EST. 2012
+                </div>
+</div>
+<div class="max-w-[70%] mb-12">
+<p class="font-technical-sm text-technical-sm text-on-surface-variant uppercase tracking-widest leading-relaxed">
+                    LIGHTING LEAD <br/>
+<span class="text-outline">CGI &amp; ART DIRECTION</span>
+</p>
+</div>
+<!-- Immersive Hero Image/Card -->
+<div class="relative w-full aspect-[4/5] glass-pane mb-12 overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 grayscale hover:grayscale-0 transition-all duration-700" data-alt="A cinematic, high-contrast visual effects shot of a futuristic metropolis at night, seen through a rainy window. The lighting is dominated by moody teals and oranges, with intricate volumetric light beams and realistic lens flares. The overall aesthetic is dark and sophisticated, mirroring a professional VFX lighting artist's portfolio style with deep shadows and brilliant highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvj5UIBGtWwMAgB6Flmgpy5VsI2qDUNG7YIjYXWEEMdSFlFBN1lliwKhs3IFTOrAlhqjZHmFMONbpg8Pbo6z1n9ao1nFSheU0B4DHzvNpcahRFGh6sr89Twkm9TUddRbSvlspC-Mbx_83BLUIRfCu6OHq3bMGevfI1G3v09xpg-Qr_UQcz_40civNW01vDCt0cltpxVvJWtHpKH_j5Nl-YqXnJuyC80KHYXgOCCu2bM71X3Upo1DvLtg9I_WHHxSDcf5da3npCf4A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div class="font-technical-sm text-technical-sm text-primary uppercase">
+                        REEL_V2.04
+                    </div>
+<div class="material-symbols-outlined text-primary-container text-4xl" data-icon="play_arrow">play_arrow</div>
+</div>
+</div>
+<!-- Minimal CTA -->
+<div class="flex justify-center">
+<a class="group flex flex-col items-center gap-4" href="#explore">
+<span class="font-technical-sm text-technical-sm text-primary tracking-[0.5em] uppercase group-hover:text-primary-container transition-colors duration-300">Explore</span>
+<div class="w-[1px] h-20 bg-gradient-to-b from-primary to-transparent group-hover:h-24 transition-all duration-500"></div>
+</a>
+</div>
+</section>
+<!-- Asymmetric Project Preview -->
+<section class="py-gallery-gap">
+<div class="flex flex-col gap-24">
+<!-- Project 1 -->
+<div class="relative ml-asymmetric-offset">
+<div class="absolute -left-12 top-0 vertical-text font-vertical-label text-vertical-label text-secondary">
+                        01 / LATEST
+                    </div>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-primary mb-6">Atmospheric <br/>Dissonance</h2>
+<div class="w-full aspect-video glass-pane overflow-hidden mb-4">
+<img class="w-full h-full object-cover opacity-60" data-alt="Close-up artistic shot of a digital character's eye reflecting a neon-lit cyberpunk cityscape. The lighting highlights the intricate textures of the iris and skin with surgical precision. Soft bokeh and cinematic light leaks enhance the mysterious and technically advanced mood of the VFX portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe6yWT_0sjbyTAjwhhoQ67asnXxKiwPSa5JFJpNM1BvEhkCGcTtsX6Wd4ONGHy2DKPELXxKH4fuInxTt_LTFv_frWO5XgtpLt2NVEAaGt3K1g0L3TCwd7phxexlUx-ZSeAuKwTIvoxApPPZrbF5eAkqPkOL91pZ-gLZUOfMxUMNOBYZEOafuNvlociJNObIjxAQLj6axv6JbQlikfccvCVo1kKO82hweIn9uCAR5cDMvxdXAJCgpMzdCiJkxrw1d64jSek0lewNFQ"/>
+</div>
+<p class="font-technical-sm text-technical-sm text-outline uppercase tracking-widest">Procedural Lighting / UE5</p>
+</div>
+<!-- Project 2 -->
+<div class="relative mr-asymmetric-offset self-end text-right">
+<div class="absolute -right-12 top-0 vertical-text font-vertical-label text-vertical-label text-primary-container rotate-180">
+                        02 / COMMERCIAL
+                    </div>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-primary mb-6">Velocities <br/>In Void</h2>
+<div class="w-full aspect-square glass-pane overflow-hidden mb-4">
+<img class="w-full h-full object-cover opacity-60" data-alt="Abstract 3D visualization of liquid metal flowing through a dark, zero-gravity environment. Sharp, clinical white lighting catches the edges of the metal, creating high-contrast silhouettes. The background is a pitch-black void, emphasizing the movement and form of the CG fluid, consistent with a premium VFX lighting reel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIw_MiTrnSwLLrW07M4z70WHXlisUSZHsFe7VF7axPa7Daq5XWnuizPKwVYmtw1RIn2AxcT3piZxRMJIxuI6mKpOpdk9KZ3wVW5PbC0D_718i1Z8owr303qr5dy6z0IqUwPvQu0Q_h_JLsjYGJfD0rVdotG-F1i8TkKdNRRxgaEtwD4IlrAvcxmcyk-U7EYhL__yW79RbHOCScg3rp7JeIJMymhtoNs6CtKfI6CjeGJhhSwXnbepXCqfxiPwTYoLQ0l6_qsTo9Go4"/>
+</div>
+<p class="font-technical-sm text-technical-sm text-outline uppercase tracking-widest">Ray-traced Shadows / Arnold</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Artistic Bottom Nav (Based on JSON SideNavBar/BottomNav concept) -->
+<nav class="fixed bottom-10 left-1/2 -translate-x-1/2 z-50">
+<div class="glass-pane bg-surface-container/10 backdrop-blur-2xl px-8 py-4 rounded-full border border-white/10 flex items-center gap-10">
+<!-- Active Tab: WORK -->
+<a class="flex flex-col items-center text-primary-container bg-primary/10 rounded-full p-3 scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+</a>
+<a class="text-outline p-3 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+</a>
+<a class="text-outline p-3 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+</a>
+<a class="text-outline p-3 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+</div>
+</nav>
+<!-- Footer (Based on JSON Footer) -->
+<footer class="bg-surface-container-lowest border-t border-white/5 py-20 px-[8vw] flex flex-col items-center gap-12 mt-gallery-gap">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">LUX</div>
+<div class="flex gap-8">
+<a class="font-technical-sm text-technical-sm text-outline uppercase hover:text-primary transition-colors" href="#">VIMEO</a>
+<a class="font-technical-sm text-technical-sm text-outline uppercase hover:text-primary transition-colors" href="#">ARTSTATION</a>
+<a class="font-technical-sm text-technical-sm text-outline uppercase hover:text-primary transition-colors" href="#">LINKEDIN</a>
+</div>
+<div class="font-technical-sm text-technical-sm text-on-surface-variant text-center opacity-50">
+            © 2024 VFX LEAD. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+</body></html>

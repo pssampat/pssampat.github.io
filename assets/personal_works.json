@@ -1,0 +1,80 @@
+[
+  {
+    "title": "Homecoming",
+    "desc": "Responsible for CameraTrack, Layout, EnvGen, LookDev, Lighting and Compositing.",
+    "image": "assets/images/personal_works/homecoming-stil-001.jpg",
+    "isPersonal": true
+  },
+  {
+    "title": "Enchanting Deer",
+    "desc": "Responsible for Layout, EnvGen, LookDev, Lighting and Compositing.",
+    "image": "assets/images/personal_works/enchantchingdeer.jpg",
+    "isPersonal": true
+  },
+  {
+    "title": "Virtual Bedroom",
+    "desc": "Responsible for a bit of Modeling, Layout, LookDev/Texturing, Lighting and Compositing.",
+    "image": "assets/images/personal_works/bedroomscene-blender-v001.jpg",
+    "isPersonal": true
+  },
+  {
+    "title": "McLaren P1 Racing",
+    "desc": "Responsible for Layout, EnvGen, LookDev, Lighting and Compositing.",
+    "image": "assets/images/personal_works/mclereanp-final-v003.jpg",
+    "isPersonal": true
+  },
+  {
+    "title": "LadyBug's Adventure (Day)",
+    "desc": "Responsible for Layout, EnvGen, LookDev, Lighting and Compositing.",
+    "image": "assets/images/personal_works/ladybugsadventure-day-comp.jpg",
+    "isPersonal": true
+  },
+  {
+    "title": "LadyBug's Adventure (Night)",
+    "desc": "Responsible for Layout, EnvGen, LookDev, Lighting and Compositing.",
+    "image": "assets/images/personal_works/ladybugsadventure-night-comp.jpg",
+    "isPersonal": true
+  },
+  {
+    "title": "The Maple Tree Road",
+    "desc": "Responsible for Layout, EnvGen, LookDev, Lighting and Compositing.",
+    "image": "assets/images/personal_works/mapletree-comp-v03.jpg",
+    "isPersonal": true
+  },
+  {
+    "title": "The Coffee Date",
+    "desc": "Responsible for Layout, LookDev, Lighting and Compositing.",
+    "image": "assets/images/personal_works/starbucksfinal.jpg",
+    "isPersonal": true
+  },
+  {
+    "title": "Nordic Summer",
+    "desc": "Responsible for Layout, EnvGen, LookDev, Lighting and Compositing.",
+    "image": "assets/images/personal_works/pineforest-mountain-comp-v03.jpg",
+    "isPersonal": true
+  },
+  {
+    "title": "A Light Before Death",
+    "desc": "Responsible for Lookdev, Lighting and Compositing.",
+    "image": "assets/images/personal_works/lightbeforedeath-v09.jpg",
+    "isPersonal": true
+  },
+  {
+    "title": "Rainy Night",
+    "desc": "Responsible for Layout, LookDev, Lighting and Compositing.",
+    "image": "assets/images/personal_works/rainscenet07.jpg",
+    "isPersonal": true
+  },
+  {
+    "title": "Popsicle Shader",
+    "desc": "Responsible for Model, LookDev, Lighting.",
+    "image": "assets/images/personal_works/popsicle-render1.jpg",
+    "isPersonal": true
+  },
+  {
+    "title": "Procedural Cookie Shader",
+    "desc": "Trying out Substance Designer to make a Procedural Cooke Shader.",
+    "image": "assets/images/personal_works/pratik-sampat-sdt-cookie-cam5.jpg",
+    "isPersonal": true
+  }
+]

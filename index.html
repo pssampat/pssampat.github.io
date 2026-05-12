@@ -1,279 +1,362 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://kit.fontawesome.com/6d983ebd5d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/resume.css">
-    <title>Pratik Sampat (Lighting Lead / Supervisor) | VFX/3D Portfolio</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PS-VFX | VFX LIGHTING LEAD</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <style>
+        body {
+            background-color: #0d1515;
+            color: #dce4e4;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .glass-pane {
+            backdrop-filter: blur(20px);
+            background: rgba(13, 21, 21, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ghost-border {
+            border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) 1;
+        }
+
+        .glow-orb-primary {
+            position: fixed;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(0, 242, 255, 0.03) 0%, rgba(0, 242, 255, 0) 70%);
+            z-index: -1;
+            top: -10%;
+            left: -10%;
+        }
+
+        .glow-orb-secondary {
+            position: fixed;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(255, 185, 90, 0.02) 0%, rgba(255, 185, 90, 0) 70%);
+            z-index: -1;
+            bottom: -5%;
+            right: -5%;
+        }
+
+        .vertical-text {
+            writing-mode: vertical-rl;
+        }
+    </style>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#00f2ff",
+                        "background": "#0d1515",
+                        "on-background": "#dce4e4",
+                        "surface": "#0d1515",
+                        "on-surface": "#dce4e4",
+                        "surface-variant": "#2e3637",
+                        "on-surface-variant": "#b9cacb",
+                        "outline": "#849495",
+                        "surface-container-lowest": "#080f10",
+                        "surface-container-low": "#151d1e",
+                        "primary": "#e1fdff",
+                        "secondary": "#ffb95a",
+                    },
+                    spacing: {
+                        "gallery-gap": "120px",
+                        "section-margin": "8vw",
+                        "asymmetric-offset": "15%",
+                        "gutter": "32px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Playfair Display"],
+                        "vertical-label": ["JetBrains Mono"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md-mobile": ["Playfair Display"],
+                        "technical-sm": ["JetBrains Mono"],
+                        "body-main": ["JetBrains Mono"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    fontSize: {
+                        "headline-md": ["40px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "vertical-label": ["10px", { "lineHeight": "1", "letterSpacing": "0.3em", "fontWeight": "500" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "technical-sm": ["12px", { "lineHeight": "1.5", "letterSpacing": "0.1em", "fontWeight": "400" }],
+                        "body-main": ["16px", { "lineHeight": "1.6", "fontWeight": "300" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "1.1", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
 
+    <div class="glow-orb-primary"></div>
+    <div class="glow-orb-secondary"></div>
 
-
-    <header>
-        <nav class="navbar navbar-expand-md fixed-top" data-bs-theme="dark">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav m-auto">
-                        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
-                        <a class="nav-link text-white" href="#resume">Resume</a>
-                        <a class="nav-link text-white" href="#projects">Projects</a>
-                        <a class="nav-link text-white" href="personal_works.html">Personal Works</a>
-                        <a class="nav-link text-white" href="#contact">Contact</a>
-                    </div>
-                </div>
-            </div>
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-surface/5 dark:bg-surface/5 backdrop-blur-xl border-b border-white/5 flex justify-between items-center w-full px-[8vw] py-6 h-24">
+        <a href="index.html" class="flex items-center gap-4 group">
+            <img src="assets/favicon.svg" alt="PS Logo"
+                class="h-10 w-auto group-hover:scale-105 transition-transform duration-500">
+            <div class="font-headline-md text-3xl text-primary tracking-tight">PS-VFX</div>
+        </a>
+        <nav class="hidden md:flex gap-12">
+            <a class="text-primary border-b border-primary pb-1 font-technical-sm text-technical-sm uppercase tracking-widest transition-colors duration-300"
+                href="index.html">HOME</a>
+            <a class="text-on-surface-variant font-technical-sm text-technical-sm uppercase tracking-widest hover:text-primary-container transition-colors duration-300"
+                href="projects.html">WORKS</a>
+            <a class="text-on-surface-variant font-technical-sm text-technical-sm uppercase tracking-widest hover:text-primary-container transition-colors duration-300"
+                href="info.html">INFO & RESUME</a>
         </nav>
-
-
+        <a href="mailto:pssampat@gmail.com"
+            class="hidden md:block border border-primary-container/30 px-6 py-2 font-technical-sm text-technical-sm text-primary-container hover:bg-primary-container/10 transition-all uppercase tracking-widest">
+            CONTACT
+        </a>
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 items-end group z-[60] relative">
+            <div class="w-8 h-[1px] bg-primary transition-all duration-300"></div>
+            <div class="w-5 h-[1px] bg-primary transition-all duration-300"></div>
+        </button>
     </header>
 
-    <main>
-
-        <div class="homepage pt-5 pb-5 ">
-            <!-- <div class="container"> -->
-                <!-- <div class="row"> -->
-                    <div class="col-sm-12 col-lg-6 pt-5 text-center">
-                        <img src="assets/images/profile_picture_new.jpg" class="profile-image shadow" />
-                        <!-- <h1 class="site-heading">Hello, I'm<span class="creator-name d-block">PRATIK</span></h1> -->
-                    </div>
-                    <div class="col-sm-12 col-lg-6 pt-5 d-flex flex-column justify-content-center text-center">
-                        <h1 class="site-heading"><span class="creator-name d-block">PRATIK SAMPAT</span></h1>
-                        <div class="site-heading-role"><p class="about-description">VFX Lighting Lead / Supervisor<br>Technical Artist and Aspiring Developer</p></div>
-                        <p class="about-para pt-1">
-                            Senior/Lead VFX Lighting Artist & TD with 11+ years of experience delivering high-quality
-                            lighting for complex film,
-                            episodic, and CG productions.<br> Combines strong artistic sensibility with deep technical
-                            expertise to lead teams, optimize workflows, develop tools, and solve challenging rendering
-                            and performance issues in fast-paced production environments.
-                        </p>
-                    </div>
-                <!-- </div> -->
-            <!-- </div> -->
-        </div>
-
-        <div id="resume" class="container my-4 resume_container">
-            <div class="row resume">
-
-                <!-- LEFT COLUMN -->
-                <div class="col-lg-8 resume-left">
-
-                <div class="section">
-                    <div class="section-title">EXPERIENCE</div>
-                    
-                    <div class="resume_role">VFX Lighting Lead TD</div>
-                    <div class="meta">DNEG · March 2025 — Present</div>
-                    <ul>
-                    <li>Led and supervised lighting across multiple episodic and feature film projects.</li>
-                    <li>Collaborated with supervisors, production, and cross-site teams.</li>
-                    <li>Worked closely with upstream departments to define lighting requirements.</li>
-                    <li>Optimized workflows and mentored artists.</li>
-                    </ul>
-
-                    <div class="resume_role">VFX Lighting Lead TD</div>
-                    <div class="meta">ReDefine/DNEG · April 2021 — March 2025</div>
-                    <ul>
-                    <li>Provided creative and technical direction for lighting.</li>
-                    <li>Collaborated with supervisors and cross-site teams.</li>
-                    <li>Optimized workflows and improved render efficiency.</li>
-                    </ul>
-
-                    <div class="resume_role">Sr. Lighting ATD</div>
-                    <div class="meta">ReDefine/DNEG · Aug 2019 — April 2021</div>
-                    <ul>
-                    <li>Delivered high-quality lighting for complex VFX and CG shots across film and episodic projects, collaborating closely with supervisors, production, and cross-department teams.</li>
-                    <li>Provided technical support, troubleshot heavy scenes, optimized render performance, and developed tools to streamline workflows.</li>
-                    <li>Contributed to efficient shot execution under tight deadlines and improved overall team productivity.</li>
-                    </ul>
-
-                    <div class="resume_role">Sr. Look-Dev Artist</div>
-                    <div class="meta">Xentrix Studios · May 2016 — May 2019</div>
-                    <ul>
-                    <li>Handled look development, master lighting, and shot production across multiple CG feature and episodic projects.</li>
-                    <li>Created reusable lighting and comp setups, collaborated with pipeline to establish efficient workflows, and developed tools/scripts to streamline production.</li>
-                    <li>Supported artists with technical guidance, optimized scenes for performance, and contributed to consistent visual quality and timely delivery across shows.</li>
-                    </ul>
-
-                    <div class="resume_role">Lighting and Compositing Artist</div>
-                    <div class="meta">ArtHouse MediaWorks · May 2015 — May 2016</div>
-                    <ul>
-                    <li>Produced realistic lighting and compositing, achieving a high level of client satisfaction.</li>
-                    <li>Managed shot execution end-to-end, adapting to various styles and project requirements.</li>
-                    <li>Ensured quality and timely delivery across multiple productions.</li>
-                    </ul>
-
-                </div>
-                </div>
-
-
-                <!-- RIGHT COLUMN -->
-                <div class="col-lg-4 resume-right">
-
-                <div class="section">
-                    
-                    <div class="section-title">EDUCATION</div>
-
-                    <div class="resume_role">Bachelors in Animation/VFX</div>
-                    <div class="meta">IGNOU · 2014</div>
-
-                    <div class="resume_role">Diploma in I.T</div>
-                    <div class="meta">MET, Nashik · 2011</div>
-
-                    <div class="resume_role">Secondary School Certificate</div>
-                    <div class="meta">St. Andrew's Silver Oak · 2007</div>
-                </div>
-
-
-                <div class="section">
-                    <div class="section-title">SKILLS</div>
-                    <p>Renderman · Redshift · Arnold · Physically based lighting · Lookdev · HDRI · Team Leadership</p>
-
-                    <h6 class="section-title">SOFTWARE SKILLS</h6>
-                    <p>Houdini · Nuke · Clarisse · Blender · Maya · Unreal · USD</p>
-
-                    <h6 class="section-title">TECHNICAL SKILLS</h6>
-                    <p>Python · MEL · Git · Shotgrid</p>
-                </div>
-
-
-                <div class="section">
-                    <div class="section-title">AWARDS AND RECOGNITION</div>
-
-                    <div class="resume_role">ReDefine ALL-STAR</div>
-                    <div class="meta">ReDefine · Dec 2021</div>
-
-                    <div class="resume_role">op Exhibited Photographs</div>
-                    <div class="meta">India Corporate Photography Contest 2021, SONY India Pvt. Ltd. · 2021</div>
-
-                    <div class="resume_role">Best LookDev Artist of the Month</div>
-                    <div class="meta">Xentrix Studios, Bangalore · Feb 2018</div>
-
-                    <div class="resume_role">Best CG Lighting [Nomination]</div>
-                    <div class="meta">MAAC 24FPS International Animation Awards, Mumbai · 2014</div>
-
-                    <div class="resume_role">Best Animation Shortfilm [Nomination]</div>
-                    <div class="meta">MAAC 24FPS International Animation Awards, Mumbai · 2013</div>
-                </div>
-
-
-                <div class="section">
-                    <div class="section-title">LANGUAGES</div>
-                    <p>English, Hindi</p>
-                </div>
-
-            </div>
-
-        </div>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-background/95 backdrop-blur-xl z-40 hidden flex-col items-center justify-center gap-12 opacity-0 transition-opacity duration-300">
+        <a class="text-primary font-technical-sm text-xl uppercase tracking-widest border-b border-primary pb-1"
+            href="index.html">HOME</a>
+        <a class="text-on-surface-variant font-technical-sm text-xl uppercase tracking-widest hover:text-primary-container transition-colors duration-300"
+            href="projects.html">WORKS</a>
+        <a class="text-on-surface-variant font-technical-sm text-xl uppercase tracking-widest hover:text-primary-container transition-colors duration-300"
+            href="info.html">INFO & RESUME</a>
+        <a class="text-primary-container font-technical-sm text-xl uppercase tracking-widest hover:text-primary transition-colors duration-300"
+            href="mailto:pssampat@gmail.com">CONTACT</a>
     </div>
 
-        <!-- PROJECTS -->
-            <div class="container">
-                <div class="row">
-                    <div id="projects" class="projects">
-                    <h3>PROJECTS</h3>
-                    </div>
+    <main class="relative">
+        <section class="min-h-[100svh] flex flex-col justify-center px-[8vw] relative overflow-hidden pt-24">
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <img class="w-full h-full object-cover opacity-20 mix-blend-overlay grayscale"
+                    src="assets/images/films/wrecking_crew.jpg" alt="Background Texture" />
+            </div>
 
-                    <div id="projects-container"></div>
+            <div class="relative z-10">
+                <div class="flex items-baseline gap-4 mb-4">
+                    <span
+                        class="font-technical-sm text-technical-sm text-primary-container tracking-[0.4em] uppercase">Visual
+                        Excellence</span>
+                    <div class="h-px w-24 bg-primary-container/30"></div>
+                </div>
+
+                <h1
+                    class="font-display-lg text-[clamp(100px,18vw,180px)] leading-[0.8] text-primary tracking-tighter mix-blend-difference pb-2">
+                    PRATIK S
+                </h1>
+
+                <div class="mt-4 md:ml-4 flex flex-col gap-2">
+                    <span class="font-technical-sm text-technical-sm text-secondary tracking-[1em] uppercase">LIGHTING
+                        LEAD / SUPERVISOR / TD</span>
+                    <p class="font-body-main text-on-surface-variant max-w-md mt-6 opacity-60">
+                        Senior/Lead VFX Lighting Artist & TD with 11+ years of experience delivering high-quality
+                        lighting for complex film, episodic, and CG productions.<br>
+                        Combines strong artistic sensibility with deep technical
+                        expertise to lead teams, optimize workflows, develop tools, and solve challenging rendering
+                        and performance issues in fast-paced production environments.
+                    </p>
+                </div>
+
+                <div class="mt-16 flex items-center gap-8">
+                    <a href="#showreels"
+                        class="group relative px-8 py-4 border border-primary-container/50 overflow-hidden transition-all hover:border-primary-container inline-block">
+                        <span
+                            class="relative z-10 font-technical-sm text-technical-sm text-primary tracking-widest group-hover:text-on-primary-container transition-colors">VIEW
+                            REELS</span>
+                        <div
+                            class="absolute inset-0 bg-primary-container translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        </div>
+                    </a>
+                    <div class="flex flex-col items-center gap-4 opacity-40">
+                        <span class="font-vertical-label text-vertical-label uppercase">SCROLL</span>
+                        <div class="w-px h-12 bg-white/20 relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-1/2 bg-primary-container animate-bounce"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div class="absolute right-[8vw] top-1/2 -translate-y-1/2 hidden xl:block z-10">
+                <div
+                    class="vertical-text font-technical-sm text-technical-sm text-outline tracking-widest opacity-30 flex items-center gap-4">
+                    <span>ESTABLISHED 2012</span>
+                    <div class="w-px h-24 bg-outline/30"></div>
+                    <span>SENIOR LIGHTING TD</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showreels Section -->
+        <section id="showreels" class="py-gallery-gap px-[8vw]">
+            <div class="flex flex-col md:flex-row gap-gutter items-start">
+
+                <div class="w-full md:w-1/2 relative group mb-20 md:mb-0">
+                    <div
+                        class="absolute -left-8 md:-left-12 top-0 vertical-text font-vertical-label text-outline opacity-50">
+                        REEL 01</div>
+                    <a href="https://www.youtube.com/watch?v=xY2ZOLuQ6Vo" target="_blank"
+                        class="block aspect-video bg-surface-container-low glass-pane overflow-hidden relative border border-white/5 cursor-pointer">
+                        <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                            src="assets/images/films/wrecking_crew.jpg" alt="Lighting Showreel" />
+                        <div
+                            class="absolute inset-0 bg-primary-container/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <!-- Play Overlay -->
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div
+                                class="w-16 h-16 rounded-full border border-primary-container flex items-center justify-center bg-background/50 backdrop-blur">
+                                <span
+                                    class="material-symbols-outlined text-primary-container text-3xl ml-1">play_arrow</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mt-8">
+                        <h3 class="font-headline-md text-headline-md text-primary">Lighting Showreel</h3>
+                        <div class="flex gap-4 mt-2">
+                            <span class="font-technical-sm text-technical-sm text-secondary">2026 CUT</span>
+                            <span class="font-technical-sm text-technical-sm text-outline uppercase">Katana /
+                                RenderMan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/3 mt-gallery-gap md:ml-auto">
+                    <div class="relative group">
+                        <div
+                            class="absolute -right-8 md:-right-12 top-0 vertical-text font-vertical-label text-outline opacity-50">
+                            REEL 02</div>
+                        <a href="https://www.youtube.com/watch?v=U9gg8kBaBXc" target="_blank"
+                            class="block aspect-[3/4] bg-surface-container-low glass-pane overflow-hidden relative border border-white/5 cursor-pointer">
+                            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                                src="assets/images/personal_works/mclereanp-final-v003.jpg"
+                                alt="Compositing Showreel" />
+                            <div
+                                class="absolute inset-0 bg-primary-container/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                            </div>
+                            <!-- Play Overlay -->
+                            <div
+                                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div
+                                    class="w-16 h-16 rounded-full border border-primary-container flex items-center justify-center bg-background/50 backdrop-blur">
+                                    <span
+                                        class="material-symbols-outlined text-primary-container text-3xl ml-1">play_arrow</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="mt-8">
+                            <h3 class="font-headline-md text-headline-md text-primary">Compositing Showreel</h3>
+                            <div class="flex gap-4 mt-2">
+                                <span class="font-technical-sm text-technical-sm text-secondary">ARCHIVE</span>
+                                <span class="font-technical-sm text-technical-sm text-outline uppercase">Nuke</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Mini Info block -->
+        <section class="py-gallery-gap px-[8vw] bg-surface-container-lowest/30">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter border-t border-white/5 pt-20">
+                <div class="flex flex-col gap-4">
+                    <span class="font-technical-sm text-technical-sm text-primary-container uppercase">Expertise</span>
+                    <ul class="font-body-main text-on-surface-variant flex flex-col gap-2 opacity-60">
+                        <li>Shot Lighting</li>
+                        <li>Look Development</li>
+                        <li>Master Lighting</li>
+                        <li>Pipeline Dev</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <span class="font-technical-sm text-technical-sm text-primary-container uppercase">Toolkit</span>
+                    <ul class="font-body-main text-on-surface-variant flex flex-col gap-2 opacity-60">
+                        <li>Foundry Katana</li>
+                        <li>Autodesk Maya</li>
+                        <li>Pixar Renderman</li>
+                        <li>SideFX Houdini</li>
+                        <li>Foundry Nuke</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2 flex flex-col items-start md:items-end text-left md:text-right mt-12 md:mt-0">
+                    <div class="font-headline-md text-headline-md text-primary mb-6 leading-tight max-w-sm">Let's build
+                        new worlds through light.</div>
+                    <a class="font-technical-sm text-technical-sm text-secondary hover:text-primary transition-colors border-b border-secondary/30 pb-1 uppercase tracking-widest"
+                        href="mailto:pssampat@gmail.com">pssampat@gmail.com</a>
+                </div>
+            </div>
+        </section>
+
     </main>
-    
-    <!-- YOUTUBE BTN -->
-    <!-- <div class="showreel_btn showreel_text">
-    <a href="https://www.youtube.com/watch?v=xY2ZOLuQ6Vo"><i class="fa-brands fa-youtube showreel_logo"></i>SHOWREEL</a>
-    </div> -->
 
-    <!-- CONTACT ME -->
-    <div id="contact" class="row">
-
-        <div class="col-12 col-md-6 pt-5">
-            <div class="d-flex flex-row justify-content-center mt-3 mb-3">
-                <div class="footer-logo-container">
-                    <a href="mailto:pssampat@gmail.com"><i class="fa-chisel fa-regular fa-envelope contact-icon"></i></a>
-                </div>
-                <div class="footer-logo-container">
-                    <a href="https://www.linkedin.com/in/pssampat/"><i class="fa-brands fa-linkedin contact-icon"></i></a>
-                </div>
-                <div class="footer-logo-container">
-                    <a href="https://www.instagram.com/pssampat"><i class="fa-brands fa-instagram contact-icon"></i></a>
-                </div>
-            </div>
-            <p class="col-12 text-center pt-3 footer-text">Mumbai, India</p>
+    <footer
+        class="w-full py-20 px-[8vw] bg-surface-container-lowest flex flex-col md:flex-row justify-between items-center gap-8 border-t border-white/5">
+        <div class="flex flex-col items-center md:items-start">
+            <img src="assets/logo.svg" alt="PS-VFX Full Logo" class="h-28 w-auto mb-4">
+            <p class="font-technical-sm text-technical-sm text-on-surface-variant opacity-60">© 2026 PS-VFX. ALL RIGHTS
+                RESERVED.</p>
         </div>
-
-        <div class="col-12 col-md-6 pt-5 text-center contact-container">
-            <div class="d-flex flex-column justify-content-center text-center mt-3 mb-3">
-                <h1 class="footer-heading pb-1">Contact Me</h1>
-                <p class="footer-text">
-                    <i class="fa-solid fa-envelope p-1"></i>
-                    <a href="mailto:pssampat@gmail.com">pssampat@gmail.com</a>
-                </p>
-                <p class="footer-text">
-                    <i class="fa-solid fa-phone m-1"></i>
-                    +91 8055581082
-                </p>
-                <p class="footer-text">
-                    <i class="fa-brands fa-whatsapp m-1"></i>
-                    Pratik Sampat
-                </p>
-            </div>
+        <div class="flex flex-wrap gap-8 md:gap-12 justify-center">
+            <a class="text-outline font-technical-sm text-technical-sm uppercase tracking-widest hover:text-primary transition-colors opacity-80 hover:opacity-100"
+                href="https://vimeo.com/pssampat" target="_blank">VIMEO</a>
+            <a class="text-outline font-technical-sm text-technical-sm uppercase tracking-widest hover:text-primary transition-colors opacity-80 hover:opacity-100"
+                href="https://www.artstation.com/pssampat" target="_blank">ARTSTATION</a>
+            <a class="text-outline font-technical-sm text-technical-sm uppercase tracking-widest hover:text-primary transition-colors opacity-80 hover:opacity-100"
+                href="https://www.linkedin.com/in/pssampat/" target="_blank">LINKEDIN</a>
+            <a class="text-outline font-technical-sm text-technical-sm uppercase tracking-widest hover:text-primary transition-colors opacity-80 hover:opacity-100"
+                href="info.html">RESUME</a>
         </div>
-        
-    </div>
+    </footer>
 
-    <div class="row">
-        <div class="d-flex flex-row justify-content-center mt-3 mb-3">
-        <div class="svg_contact"><img src="assets/images/contact_dark.svg"></div>
-    </div></div>
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let menuOpen = false;
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                menuOpen = !menuOpen;
+                if (menuOpen) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                    setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('opacity-0');
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenu.classList.remove('flex');
+                        document.body.style.overflow = '';
+                    }, 300);
+                }
+            });
+        }
+    </script>
 
-    <div class="row pt-5">
-        <p class="col-12 text-center">
-            This website is made with <i class="fa-regular fa-heart"></i> by Pratik Sampat
-        </p>
-    </div>
-
-    <!-- FOR POPUP -->
-    <div id="popup-overlay" class="popup-overlay"></div>
-    <div id="popup" class="popup container-fluid">
-
-        <span class="popup-close">&times;</span>
-
-        <div class="row h-100 align-items-center">
-            
-            <div class="col-12 col-md-4 text-center">
-                <img id="popup-image" class="popup-image img-fluid">
-            </div>
-
-            <div class="col-12 col-md-8">
-                <h2 id="popup-title" class="popup-title"></h2>
-                <p id="popup-role" class="popup-role"></p>
-                <p id="popup-desc" class="popup-description"></p>
-                <a id="popup-link" target="_blank">View Trailer/Breakdown</a>
-            </div>
-
-        </div>
-    </div>
-
-
-    <script src="src/projects.js"></script>
-    
 </body>
-
 
 </html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PROJECTS | PS-VFX</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#00f2ff",
+                        "background": "#0d1515",
+                        "on-background": "#dce4e4",
+                        "surface": "#0d1515",
+                        "on-surface": "#dce4e4",
+                        "surface-variant": "#2e3637",
+                        "on-surface-variant": "#b9cacb",
+                        "outline": "#849495",
+                        "surface-container-lowest": "#080f10",
+                        "surface-container-low": "#151d1e",
+                        "primary": "#e1fdff",
+                        "secondary": "#ffb95a",
+                    },
+                    spacing: {
+                        "gallery-gap": "120px",
+                        "section-margin": "8vw",
+                        "asymmetric-offset": "15%",
+                        "gutter": "32px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Playfair Display"],
+                        "vertical-label": ["JetBrains Mono"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md-mobile": ["Playfair Display"],
+                        "technical-sm": ["JetBrains Mono"],
+                        "body-main": ["JetBrains Mono"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    fontSize: {
+                        "headline-md": ["40px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "vertical-label": ["10px", { "lineHeight": "1", "letterSpacing": "0.3em", "fontWeight": "500" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "technical-sm": ["12px", { "lineHeight": "1.5", "letterSpacing": "0.1em", "fontWeight": "400" }],
+                        "body-main": ["16px", { "lineHeight": "1.6", "fontWeight": "300" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "1.1", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body
+    class="bg-background text-on-background font-body-main selection:bg-primary-container selection:text-on-primary-container relative min-h-screen flex flex-col">
+
+    <!-- Ambient Bokeh Elements -->
+    <div class="glow-orb bg-[#00f2ff] top-[-10%] left-[-10%] w-[50vw] h-[50vw]"></div>
+
+    <!-- Top Navigation Bar -->
+    <header
+        class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/5 backdrop-blur-xl border-b border-white/5 flex justify-between items-center px-[8vw] py-6 h-24">
+        <a href="index.html" class="flex items-center gap-4 group">
+            <img src="assets/favicon.svg" alt="PS Logo"
+                class="h-10 w-auto group-hover:scale-105 transition-transform duration-500">
+            <div class="font-headline-md text-3xl text-primary tracking-tight">PS-VFX</div>
+        </a>
+        <nav class="hidden md:flex gap-12 items-center">
+            <a class="text-on-surface-variant font-technical-sm text-technical-sm uppercase tracking-widest hover:text-primary-container transition-colors duration-300"
+                href="index.html">HOME</a>
+            <a class="text-primary border-b border-primary pb-1 font-technical-sm text-technical-sm uppercase tracking-widest"
+                href="projects.html">WORKS</a>
+            <a class="text-on-surface-variant font-technical-sm text-technical-sm uppercase tracking-widest hover:text-primary-container transition-colors duration-300"
+                href="info.html">INFO & RESUME</a>
+        </nav>
+        <a href="mailto:pssampat@gmail.com"
+            class="hidden md:block px-6 py-2 border border-primary-container text-primary-container font-technical-sm text-technical-sm tracking-widest hover:bg-primary-container/10 transition-all duration-300">CONTACT</a>
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 items-end group z-[60] relative">
+            <div class="w-8 h-[1px] bg-primary transition-all duration-300"></div>
+            <div class="w-5 h-[1px] bg-primary transition-all duration-300"></div>
+        </button>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-background/95 backdrop-blur-xl z-40 hidden flex-col items-center justify-center gap-12 opacity-0 transition-opacity duration-300">
+        <a class="text-on-surface-variant font-technical-sm text-xl uppercase tracking-widest hover:text-primary-container transition-colors duration-300"
+            href="index.html">HOME</a>
+        <a class="text-primary font-technical-sm text-xl uppercase tracking-widest border-b border-primary pb-1"
+            href="projects.html">WORKS</a>
+        <a class="text-on-surface-variant font-technical-sm text-xl uppercase tracking-widest hover:text-primary-container transition-colors duration-300"
+            href="info.html">INFO & RESUME</a>
+        <a class="text-primary-container font-technical-sm text-xl uppercase tracking-widest hover:text-primary transition-colors duration-300"
+            href="mailto:pssampat@gmail.com">CONTACT</a>
+    </div>
+
+    <main class="relative z-10 flex-grow pt-40 pb-20 px-[8vw]">
+
+        <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+            <div class="relative">
+                <h1
+                    class="font-display-lg text-5xl md:text-7xl lg:text-[80px] text-primary md:rotate-180 md:[writing-mode:vertical-lr] origin-center md:-ml-12 lg:-ml-20 font-bold uppercase tracking-widest">
+                    WORKS</h1>
+                <div class="hidden md:block absolute top-0 left-0 h-full w-[1px] bg-primary/20"></div>
+            </div>
+            <div class="flex flex-col gap-4 text-left md:text-right w-full md:w-auto" id="category-filters">
+                <span class="font-technical-sm text-xs text-outline tracking-[0.2em] mb-2 md:mb-4">CATEGORIES //</span>
+                <nav
+                    class="flex flex-wrap gap-4 md:gap-8 items-center border-b border-white/5 pb-4 justify-start md:justify-end">
+                    <button
+                        class="category-btn active font-technical-sm text-xs text-on-surface-variant transition-colors hover:text-primary"
+                        data-category="FEATURE FILMS">VFX Feature Films</button>
+                    <button
+                        class="category-btn font-technical-sm text-xs text-on-surface-variant transition-colors hover:text-primary"
+                        data-category="TELEVISION">VFX Episodics</button>
+                    <button
+                        class="category-btn font-technical-sm text-xs text-on-surface-variant transition-colors hover:text-primary"
+                        data-category="ANIMATION">Animation Films</button>
+                    <button
+                        class="category-btn font-technical-sm text-xs text-on-surface-variant transition-colors hover:text-primary"
+                        data-category="PERSONAL_WORKS">Personal Works</button>
+                </nav>
+            </div>
+        </div>
+
+        <div id="projects-container"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-16 md:gap-y-24 items-start">
+            <!-- Projects injected by JS -->
+        </div>
+
+    </main>
+
+    <!-- FULLSCREEN IMAGE LIGHTBOX -->
+    <div id="lightbox-overlay"
+        class="fixed inset-0 bg-background/95 backdrop-blur-md z-[100] hidden flex-col items-center justify-center transition-opacity duration-300 opacity-0 overflow-hidden">
+        <button id="lightbox-close"
+            class="absolute top-4 right-4 md:top-6 md:right-8 w-12 h-12 flex items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md border border-white/10 text-white hover:text-primary transition-all text-4xl pb-1 rounded-full z-[110] shadow-[0_0_15px_rgba(0,0,0,0.5)]">&times;</button>
+        <div class="relative w-full h-full flex items-center justify-center overflow-hidden">
+            <img id="lightbox-image" src="" alt="Fullscreen view"
+                 class="max-w-[95vw] max-h-[90vh] object-contain shadow-2xl select-none" draggable="false">
+        </div>
+    </div>
+
+    <script src="js/projects.js"></script>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let menuOpen = false;
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                menuOpen = !menuOpen;
+                if (menuOpen) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                    setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('opacity-0');
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenu.classList.remove('flex');
+                        document.body.style.overflow = '';
+                    }, 300);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

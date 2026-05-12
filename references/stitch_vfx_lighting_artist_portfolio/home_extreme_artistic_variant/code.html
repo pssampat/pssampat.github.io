@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#221b00",
+                    "primary-container": "#00f2ff",
+                    "tertiary-fixed-dim": "#e8c423",
+                    "background": "#0d1515",
+                    "surface-container-highest": "#2e3637",
+                    "secondary-fixed-dim": "#ffb95a",
+                    "on-error": "#690005",
+                    "secondary-container": "#c68315",
+                    "on-primary-fixed": "#002022",
+                    "on-secondary": "#462a00",
+                    "on-background": "#dce4e4",
+                    "inverse-surface": "#dce4e4",
+                    "surface-dim": "#0d1515",
+                    "on-surface": "#dce4e4",
+                    "on-tertiary-fixed-variant": "#554500",
+                    "outline": "#849495",
+                    "on-secondary-container": "#3d2400",
+                    "inverse-primary": "#00696f",
+                    "error": "#ffb4ab",
+                    "surface-bright": "#333b3b",
+                    "on-secondary-fixed": "#2a1800",
+                    "primary-fixed": "#74f5ff",
+                    "on-primary-fixed-variant": "#004f54",
+                    "error-container": "#93000a",
+                    "on-primary": "#00363a",
+                    "surface-container-lowest": "#080f10",
+                    "surface-variant": "#2e3637",
+                    "primary": "#e1fdff",
+                    "surface-container-high": "#232b2c",
+                    "on-surface-variant": "#b9cacb",
+                    "on-tertiary-container": "#725e00",
+                    "on-error-container": "#ffdad6",
+                    "surface": "#0d1515",
+                    "surface-container": "#192122",
+                    "tertiary": "#fff6e4",
+                    "on-tertiary": "#3b2f00",
+                    "secondary-fixed": "#ffddb6",
+                    "secondary": "#ffb95a",
+                    "on-primary-container": "#006a71",
+                    "tertiary-fixed": "#ffe173",
+                    "outline-variant": "#3a494b",
+                    "primary-fixed-dim": "#00dbe7",
+                    "on-secondary-fixed-variant": "#643f00",
+                    "tertiary-container": "#fed83a",
+                    "surface-tint": "#00dbe7",
+                    "inverse-on-surface": "#2a3232",
+                    "surface-container-low": "#151d1e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gallery-gap": "120px",
+                    "section-margin": "8vw",
+                    "asymmetric-offset": "15%",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "vertical-label": ["JetBrains Mono"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-md-mobile": ["Playfair Display"],
+                    "technical-sm": ["JetBrains Mono"],
+                    "body-main": ["JetBrains Mono"],
+                    "display-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-md": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "vertical-label": ["10px", {"lineHeight": "1", "letterSpacing": "0.3em", "fontWeight": "500"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "technical-sm": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.1em", "fontWeight": "400"}],
+                    "body-main": ["16px", {"lineHeight": "1.6", "fontWeight": "300"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-pane {
+            backdrop-filter: blur(20px);
+            background: rgba(13, 21, 21, 0.05);
+            border: 1px solid transparent;
+            border-image: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0)) 1;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .bokeh-cyan {
+            background: radial-gradient(circle, rgba(0, 242, 255, 0.08) 0%, rgba(0, 242, 255, 0) 70%);
+        }
+        .bokeh-orange {
+            background: radial-gradient(circle, rgba(255, 185, 90, 0.05) 0%, rgba(255, 185, 90, 0) 70%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-main selection:bg-primary-container selection:text-on-primary-fixed overflow-hidden">
+<!-- Atmospheric Background Layers -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+<div class="absolute top-[-10%] left-[-5%] w-[60vw] h-[60vw] bokeh-cyan rounded-full"></div>
+<div class="absolute bottom-[-20%] right-[-10%] w-[70vw] h-[70vw] bokeh-orange rounded-full"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-20" style="background-image: radial-gradient(#849495 0.5px, transparent 0.5px); background-size: 40px 40px;"></div>
+</div>
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 left-0 right-0 z-50 h-24 flex justify-between items-center px-[8vw] py-6 bg-surface/5 backdrop-blur-xl border-b border-white/5">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">LUX_VFX</div>
+<nav class="hidden md:flex gap-12">
+<a class="text-primary border-b border-primary pb-1 font-technical-sm text-technical-sm uppercase tracking-widest" href="#">REEL</a>
+<a class="text-on-surface-variant font-technical-sm text-technical-sm uppercase tracking-widest hover:text-primary-container transition-colors duration-300" href="#">ARCHIVE</a>
+<a class="text-on-surface-variant font-technical-sm text-technical-sm uppercase tracking-widest hover:text-primary-container transition-colors duration-300" href="#">INFO</a>
+</nav>
+<button class="font-technical-sm text-technical-sm uppercase tracking-widest text-primary hover:text-primary-container transition-colors">CONTACT</button>
+</header>
+<!-- Side Navigation Shell -->
+<aside class="fixed left-8 top-1/2 -translate-y-1/2 w-20 h-fit py-8 rounded-full z-50 bg-surface-container/10 backdrop-blur-2xl border border-white/10 flex flex-col items-center gap-12">
+<div class="p-3 text-primary-container bg-primary/10 rounded-full">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</div>
+<div class="p-3 text-outline hover:bg-white/5 hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+</div>
+<div class="p-3 text-outline hover:bg-white/5 hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+</div>
+<div class="p-3 text-outline hover:bg-white/5 hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="relative z-10 w-full h-screen flex">
+<!-- Massive Vertical Title Section -->
+<section class="h-full w-1/3 flex items-center justify-center relative border-r border-white/5">
+<h1 class="vertical-text font-display-lg text-[15vw] leading-none text-primary uppercase opacity-10 tracking-tighter select-none">
+                LUX
+            </h1>
+<div class="absolute top-1/4 right-0 transform translate-x-1/2 bg-primary-container h-px w-32"></div>
+</section>
+<!-- Dynamic Hero Section -->
+<section class="flex-1 relative flex flex-col justify-center px-[8vw]">
+<!-- Technical 'Dust' Metadata Particles -->
+<div class="absolute top-20 right-[15%] font-technical-sm text-[8px] text-outline/40 leading-relaxed uppercase select-none pointer-events-none">
+                COORD: 34.0522° N, 118.2437° W<br/>
+                REF: 0x29F84_LX<br/>
+                RENDER_ENGINE: SPECTRAL_V4<br/>
+                SAMPLES: 4096
+            </div>
+<div class="absolute bottom-40 left-[10%] font-technical-sm text-[8px] text-outline/40 leading-relaxed uppercase select-none pointer-events-none">
+                ISO: 800<br/>
+                SHUTTER: 1/48<br/>
+                LENS: 35MM ANAMORPHIC<br/>
+                GAMMA: 2.2_LINEAR
+            </div>
+<div class="max-w-2xl relative">
+<div class="font-vertical-label text-vertical-label text-secondary mb-4 flex items-center gap-4">
+<span class="w-12 h-px bg-secondary/30"></span>
+                    FEATURED WORK 2024
+                </div>
+<h2 class="font-display-lg text-display-lg text-primary mb-8 leading-tight">
+                    Simulating <span class="text-primary-container italic">Infinite</span> Light.
+                </h2>
+<p class="font-body-main text-on-surface-variant max-w-lg mb-12 border-l-2 border-primary-container/20 pl-6 py-2">
+                    Visual effects at the intersection of technical excellence and cinematic soul. We specialize in high-end lighting, atmospheric simulations, and photorealistic integration for global cinema.
+                </p>
+<!-- Explore Button: Glowing Ring -->
+<button class="group relative w-32 h-32 flex items-center justify-center rounded-full border border-primary-container/30 hover:border-primary-container transition-all duration-500 hover:scale-105">
+<div class="absolute inset-0 rounded-full bg-primary-container/5 blur-md group-hover:bg-primary-container/10 transition-all"></div>
+<span class="font-technical-sm text-technical-sm text-primary tracking-widest">EXPLORE</span>
+<!-- Decorative inner ring -->
+<div class="absolute w-24 h-24 rounded-full border border-primary-container/10 group-hover:rotate-180 duration-1000 transition-transform"></div>
+</button>
+</div>
+<!-- Card Floating in Background -->
+<div class="absolute right-[5%] bottom-[15%] w-72 glass-pane p-6 rounded-lg opacity-80 hover:opacity-100 transition-opacity">
+<div class="relative w-full aspect-video mb-4 overflow-hidden bg-surface-container-highest">
+<img alt="VFX Lighting Simulation" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A cinematic 3D render of a futuristic server room with rows of glowing blue hardware and dense atmospheric haze. Volumetric light rays pierce through the smoke from neon cyan sources, creating intense depth and high contrast. The visual style is ultra-clean and high-tech, focusing on photorealistic lighting simulations and intricate technical details in a dark-room environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQOw03DXz83oOhiIoB_zSu49Zv9jOfTgy1pzNLp4tKIap2LY_Asz1r3k6YEXGkMzd3zr87TegWST-2_lKwasO7jZH5WPz70WkkLy8v5fXtB4ehgdTRG-lRYMSExWkkFVugkqUZ2jRDE-yjHv6mDGoJoIeyjJi45FbM7CHtPlOGuWPvzKu-AUMcr6vwQLbVGOnF8g3PvsT0uCOnLRHvrtDvdP2CHgxWL_kcO5brUkGGh6InkOjxvsYjPlMAJX8Uba3E7tjL6v5bawU"/>
+</div>
+<div class="font-technical-sm text-[10px] text-outline mb-2">PROJECT_X_02</div>
+<div class="font-headline-md text-lg text-primary">CYBERNETIC_FLOW</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="fixed bottom-0 left-0 right-0 z-40 w-full py-6 px-[8vw] bg-surface-container-lowest/50 backdrop-blur-md border-t border-white/5 flex flex-col md:flex-row justify-between items-center">
+<div class="font-technical-sm text-technical-sm text-on-surface-variant">© 2024 VFX LEAD. ALL RIGHTS RESERVED.</div>
+<div class="flex gap-8 mt-4 md:mt-0">
+<a class="text-outline hover:text-primary transition-colors font-technical-sm text-technical-sm uppercase tracking-widest" href="#">VIMEO</a>
+<a class="text-outline hover:text-primary transition-colors font-technical-sm text-technical-sm uppercase tracking-widest" href="#">ARTSTATION</a>
+<a class="text-outline hover:text-primary transition-colors font-technical-sm text-technical-sm uppercase tracking-widest" href="#">LINKEDIN</a>
+<a class="text-outline hover:text-primary transition-colors font-technical-sm text-technical-sm uppercase tracking-widest" href="#">RESUME</a>
+</div>
+</footer>
+</body></html>
