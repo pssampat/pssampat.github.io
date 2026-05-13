@@ -31,6 +31,28 @@ body {
     pointer-events: none;
 }
 
+.glow-orb-primary {
+    position: fixed;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(0, 242, 255, 0.03) 0%, rgba(0, 242, 255, 0) 70%);
+    z-index: -1;
+    top: -10%;
+    left: -10%;
+    pointer-events: none;
+}
+
+.glow-orb-secondary {
+    position: fixed;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, rgba(255, 185, 90, 0.02) 0%, rgba(255, 185, 90, 0) 70%);
+    z-index: -1;
+    bottom: -5%;
+    right: -5%;
+    pointer-events: none;
+}
+
 /* ---------- Glassmorphism Panel ---------- */
 .glass-panel {
     backdrop-filter: blur(20px);
@@ -174,6 +196,36 @@ body {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(8px); }
     to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scroll-v {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+@keyframes scroll-v-reverse {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
+}
+
+.animate-scroll-1 {
+    animation: scroll-v 60s linear infinite;
+    will-change: transform;
+}
+
+.animate-scroll-2 {
+    animation: scroll-v-reverse 75s linear infinite;
+    will-change: transform;
+}
+
+.animate-scroll-3 {
+    animation: scroll-v 85s linear infinite;
+    will-change: transform;
+}
+
+.animate-scroll-4 {
+    animation: scroll-v-reverse 65s linear infinite;
+    will-change: transform;
 }
 
 /* ---------- Responsive overrides ---------- */

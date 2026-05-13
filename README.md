@@ -16,7 +16,8 @@ Designed with a sleek, dark-themed "Luminous Shadow" aesthetic, this site highli
 
 - `index.html`: The cinematic home landing page introducing the premium visual identity.
 - `projects.html`: The primary works showcase featuring a responsive grid layout. Renders categories dynamically using custom JavaScript filters.
-- `info.html`: Detailed professional dossier, work experience timeline, skills breakdown, and academic background.
+- `info.html`: Detailed professional dossier featuring an elegant two-column editorial layout, work experience timeline, technical skills breakdown (with glowing progress bars), and academic background. Includes a direct CV download.
+- `contact.html`: Clean, focused interface for professional inquiries and collaboration requests.
 - `assets/`:
   - `projects.json`: Metadata, roles, descriptions, and trailer links for professional VFX Feature Films, Episodics, and Animation works.
   - `personal_works.json`: Dynamic metadata store for personal 3D artwork.
@@ -28,6 +29,7 @@ Designed with a sleek, dark-themed "Luminous Shadow" aesthetic, this site highli
 
 - **Cinematic Aesthetic**: Immersive dark mode design featuring rich cyan accents, custom asymmetric margins, and ambient glow effects.
 - **Dynamic Content Delivery**: Professional and personal works are fetched asynchronously from clean JSON data files, decoupling content updates from core markup.
+- **Editorial Resume**: A beautifully structured, fully responsive CSS Grid layout showcasing career milestones, exact proficiency levels, and direct document downloads.
 - **Advanced Lightbox Experience**: Clicking any personal work opens a fullscreen high-fidelity image overlay complete with:
   - **Pan & Zoom**: Mouse wheel scroll/two-finger pinch to scale smoothly (0.5x to 5x), and click-and-drag/swipe to pan around high-resolution renders.
   - **Robust Controls**: Highly visible contextual controls optimized for bright or dark imagery.
