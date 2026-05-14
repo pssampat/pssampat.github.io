@@ -9,13 +9,29 @@
 /* ---------- Base ---------- */
 html { scroll-behavior: smooth; }
 
+:root {
+    --primary-container: #00f2ff;
+    --background: #0d1515;
+    --on-background: #dce4e4;
+    --surface: #0d1515;
+    --on-surface: #dce4e4;
+    --surface-variant: #2e3637;
+    --on-surface-variant: #b9cacb;
+    --outline: #849495;
+    --surface-container-lowest: #080f10;
+    --surface-container-low: #151d1e;
+    --primary: #e1fdff;
+    --secondary: #ffb95a;
+}
+
 html, body {
-    background-color: #0d1515;
-    color: #dce4e4;
+    background-color: var(--background);
+    color: var(--on-background);
     overflow-x: hidden;
     width: 100%;
     margin: 0;
     position: relative;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 ::selection {
@@ -245,3 +261,40 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/* ---------- Layout Fallbacks (If Tailwind fails) ---------- */
+.max-w-\[1400px\] {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.gap-4 { gap: 1rem; }
+.gap-8 { gap: 2rem; }
+.gap-12 { gap: 3rem; }
+
+.grid { display: grid; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+@media (min-width: 768px) {
+    .md\:flex { display: flex; }
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Core Brand Typography Fallback */
+.font-display-lg {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
