@@ -9,11 +9,13 @@
 /* ---------- Base ---------- */
 html { scroll-behavior: smooth; }
 
-body {
+html, body {
     background-color: #0d1515;
     color: #dce4e4;
     overflow-x: hidden;
+    width: 100%;
     margin: 0;
+    position: relative;
 }
 
 ::selection {
@@ -236,4 +238,10 @@ body {
     .gallery-slide {
         height: 400px;
     }
+}
+
+/* ---------- Global Safety ---------- */
+img {
+    max-width: 100%;
+    height: auto;
 }
